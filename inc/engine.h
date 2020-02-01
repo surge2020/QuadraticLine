@@ -3,11 +3,12 @@
 
 #include <SDL2/SDL.h>
 #include "eventHandler.h"
+#include "renderHandler.h"
 
 class Engine {
 public:
     Engine();
-    const int WINDOW_WIDTH = 800;
+    const int WINDOW_WIDTH = 600;
     const int WINDOW_HEIGHT = 600;
     bool getRunning();
     void events();
@@ -22,6 +23,7 @@ private:
     const int RENDERER_FLAGS = 0;
     bool running;
     EventHandler* eventHandler;
+    RenderHandler* renderHandler;
 };
 
 #endif
