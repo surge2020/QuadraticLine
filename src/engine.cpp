@@ -8,7 +8,8 @@ Engine::Engine()
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_FLAGS);
     renderer = SDL_CreateRenderer(window, RENDERER_INDEX, RENDERER_FLAGS);
-    running = true;
+    running = true; 
+    eventHandler = new EventHandler(&running);
 }
 
 bool Engine::getRunning()
@@ -18,7 +19,7 @@ bool Engine::getRunning()
 
 void Engine::events()
 {
-
+    eventHandler->input();
 }
 
 void Engine::render()

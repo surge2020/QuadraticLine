@@ -2,6 +2,7 @@
 #define ENGINE
 
 #include <SDL2/SDL.h>
+#include "eventHandler.h"
 
 class Engine {
 public:
@@ -20,6 +21,7 @@ private:
     const int RENDERER_INDEX = -1;
     const int RENDERER_FLAGS = 0;
     bool running;
+    EventHandler* eventHandler;
 };
 
 #endif
